@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maratona Tech 2026 | Impacto da IA</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header class="topo">
+    <div>
+        <span class="etiqueta">MARATONA TECH 2026</span>
+        <h1>Inteligência Artificial e Aprendizagem</h1>
+        <p>Uma análise dos impactos da inteligência artificial nos estudos.</p>
+    </div>
+
+    <div class="selo">PAINEL DE PESQUISA</div>
+</header>
+
+<main class="container">
+
+    <section class="cabecalho">
+        <div>
+            <span class="subtitulo">ANÁLISE DOS RESULTADOS</span>
+            <h2>Visão geral da pesquisa</h2>
+        </div>
+
+        <div class="controle-filtro">
+            <label for="filtro">Filtrar participantes</label>
+            <select id="filtro">
+                <option value="menores">Menores de 18 anos</option>
+                <option value="maiores">Maiores de 18 anos</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="indicadores">
+        <article class="indicador">
+            <span>Participantes</span>
+            <strong id="totalParticipantes">11</strong>
+            <small>Pessoas entrevistadas</small>
+        </article>
+
+        <article class="indicador">
+            <span>Total de respostas</span>
+            <strong id="totalRespostas">154</strong>
+            <small>Nas 14 perguntas</small>
+        </article>
+
+        <article class="indicador">
+            <span>Resposta predominante</span>
+            <strong id="respostaMaisFrequente">Quase sempre</strong>
+            <small>Alternativa mais escolhida</small>
+        </article>
+
+        <article class="indicador">
+            <span>Percentual predominante</span>
+            <strong id="percentualPredominante">40,3%</strong>
+            <small>Sobre todas as respostas</small>
+        </article>
+    </section>
+
+    <section class="painel">
+        <span class="subtitulo">VISÃO GERAL</span>
+        <h2>Distribuição de todas as respostas</h2>
+        <p>
+            Cada fatia representa a participação de uma alternativa
+            no total de respostas do grupo selecionado.
+        </p>
+
+        <div class="pizza-wrap">
+            <canvas id="graficoPizza"></canvas>
+        </div>
+
+        <div class="legenda" id="legendaPizza"></div>
+        <p class="nota" id="totalPizza"></p>
+    </section>
+
+    <section class="painel">
+        <span class="subtitulo">COMPARAÇÃO</span>
+        <h2>Frequência geral das respostas</h2>
+        <p>Quantidade de escolhas em cada alternativa.</p>
+
+        <div class="grafico-barras">
+            <canvas id="graficoBarras"></canvas>
+        </div>
+    </section>
+
+    <section class="secao-perguntas">
+        <div class="titulo-secao">
+            <span class="subtitulo">ANÁLISE INDIVIDUAL</span>
+            <h2>Resultados das 14 perguntas</h2>
+            <p>
+                Cada gráfico apresenta a quantidade e a porcentagem
+                das respostas para a pergunta correspondente.
+            </p>
+        </div>
+
+        <div id="graficosPerguntas" class="grade-perguntas"></div>
+    </section>
+
+    <section class="painel">
+        <span class="subtitulo">DADOS DETALHADOS</span>
+        <h2>Tabela de resultados</h2>
+
+        <div class="tabela-scroll">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pergunta</th>
+                        <th>Sempre</th>
+                        <th>Quase sempre</th>
+                        <th>Raramente</th>
+                        <th>Nunca</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+
+                <tbody id="corpoTabela"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="painel resumo">
+        <span class="subtitulo">INTERPRETAÇÃO</span>
+        <h2>Resumo dos resultados</h2>
+        <p id="textoResumo"></p>
+    </section>
+
+</main>
+
+<footer>
+    <strong>MARATONA TECH 2026</strong>
+    <p>Pesquisa sobre inteligência artificial e aprendizagem.</p>
+    <small>Resultados baseados nos 20 participantes entrevistados.</small>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
